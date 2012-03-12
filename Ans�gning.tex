@@ -1,0 +1,75 @@
+%& --include-directory=/tex
+
+\documentclass[a4paper,danish]{article}
+
+\usepackage[utf8]{inputenc} % Skal passe til editorens indstillinger
+\usepackage[danish]{babel} % danske overskrifter
+\usepackage[]{biblatex}
+\bibliography{bibbase}
+\usepackage[T1]{fontenc} % fonte (output)
+\usepackage{lmodern} % vektor fonte
+\usepackage{graphicx} % indsættelse af billeder
+\usepackage{epstopdf} %Tilfj "--enable-write18" i argumentet for LaTex build. Dette vil konvertere .eps figurer til pdf-format
+\graphicspath{{./picture/}} % stivej til bibliotek med figurer
+\usepackage{subfigure} %Til gruppering af figurer
+\usepackage{mathtools} % matematik - understøtter muligheden for at bruge \eqref{}
+\usepackage{hhline} % 
+\usepackage{url} %Url's der ser korrekt ud og tillader brug af tilde
+\usepackage{multirow} %Lader en tabelcelle fylde flere rækker
+\usepackage[toc,page]{appendix} %Sørger for at bruge bogstaver til appendix istedet for talrækkefølgenn
+\textwidth = 400pt
+\marginparwidth = 86pt
+\hoffset = -25pt
+\voffset= -10pt
+\textheight = 630pt
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\usepackage{fancyhdr}
+\usepackage[plainpages=false,pdfpagelabels,pageanchor=false]{hyperref} % aktive links
+\hypersetup{%
+  pdfauthor={Insert author},
+  pdftitle={Insert title of assignment},
+  pdfsubject={Insert subject of assignment}}
+\usepackage{memhfixc}% rettelser til hyperref
+
+
+\fancyhf{} % tom header/footer
+\fancyhfoffset{20pt}
+\fancyhfoffset{20pt}
+\fancyhead[OL]{Hyttebums 2012 ansøgning \\ Simon Dam Grønnegaard \& Morten Halvorsen}
+\fancyhead[OC]{Date \\ insert date}
+\fancyhead[OR]{Danmarks Tekniske Universitet\\ DTU Elektro}
+\fancyfoot[FL]{}
+\fancyfoot[FC]{\thepage}
+\fancyfoot[FR]{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+
+% How to make ref to books or urls in bib
+%\citetitle[fx: page 1]{name of ref in bib}
+
+\begin{document}
+\input{frontpage}
+\newpage
+\tableofcontents
+\newpage
+
+\include{intro}
+
+\include{teory}
+
+\include{data}
+
+\include{diskussion}
+
+\include{conc}
+
+%End of the document, inserting bib and appendix
+\newpage
+\nocite{*}
+\printbibliography
+
+\newpage
+\appendix
+
+\end{document}
