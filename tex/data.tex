@@ -140,3 +140,14 @@ Tun i vand skal bruges \cite{bib:url:Reklame:Tun} rigeligt med tun i vand
 \\
 \\
 
+\begin{tikzpicture}
+\begin{axis}[view={60}{30}]
+\addplot3[mesh,z buffer=sort,
+samples=20,domain=-1:0,y domain=0:2*pi]
+({sqrt(1-x^2) * cos(deg(y))},
+{sqrt( 1-x^2 ) * sin(deg(y))},
+x);
+\end{axis}
+\end{tikzpicture}
+
+
