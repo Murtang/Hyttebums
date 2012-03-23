@@ -1,0 +1,56 @@
+\section{Kødpopularitet}
+
+Herunder er de mest gængse kødprodukter listet efter popularitet i følge En unavngiven kilde der følger miljøet tæt:\\
+\begin{itemize}
+\item Bacon \cite{bib:url:WikiBacon} - ingen introduktion nødvendig
+\item Kylling (Chicken) \cite{bib:url:WikiChicken} - Kød fra små fjerklædte dinosaurnedstammende dyr.
+\item Kalkun (Turkey) \cite{bib:url:WikiTurkey}- Kød fra lidt større fjerklædte dinosaurnedstammende dyr. De flyver vist ikke så godt længere og er derfor nemme at fange med en trefork
+\item Svin (Pork) \cite{bib:url:WikiPork} - Kød der er en god bund i en fantastisk lagkage
+\end{itemize}
+
+\begin{tikzpicture}
+\begin{axis}[
+ybar,
+enlargelimits=0.15,
+legend style={at={(0.5,-0.1)},
+anchor=north,legend columns=-1},
+ylabel={polpularitet},
+symbolic x coords={Beef,	Bacon,	Turkey,	Chicken,	Pork},
+xtick=data,
+nodes near coords,
+nodes near coords align={vertical},
+x tick label style={rotate=45,anchor=east},
+]
+\addplot coordinates {(Beef,230000000) (Bacon,171000000) (Turkey,76100000) (Chicken,146000000) (Pork,463000000)};
+\end{axis}
+\end{tikzpicture}
+
+En nærmere undersøgelse viser dog tydeligt Bacons posistion som svinets mest elskede kød:
+\begin{itemize}
+\item Bacon \cite{bib:url:WikiBacon}
+\item Flæskesteg \cite{bib:url:WikiRoastPork}
+\item Ham \cite{bib:url:WikiHam}
+\item Loin \cite{bib:url:WikiLoin}
+\item Spam \cite{bib:url:WikiSpam}
+\item Spare Ribs \cite{bib:url:WikiSpareRibs}
+\item Mørbrad \cite{bib:url:WikiTenderLoin}
+\end{itemize}
+
+\begin{tikzpicture}
+\begin{axis}[
+ybar,
+enlargelimits=0.15,
+legend style={at={(0.5,-0.2)},
+anchor=north,legend columns=-1},
+ylabel={\#popularitet},
+symbolic x coords={Bacon,Flaeskesteg,Ham,Loin,Spam,SpareRibs,Tenderloin},
+xtick=data,
+nodes near coords,
+nodes near coords align={vertical},
+x tick label style={rotate=45,anchor=east},
+]
+\addplot coordinates {(Bacon,171000000) (Flaeskesteg,26500000) (Ham,34900000) (Loin,168000000) (Spam,19900000)(SpareRibs,4600000)(Tenderloin,50700000)};
+\end{axis}
+\end{tikzpicture}
+
+SPAM\footnote{Well, there's egg and bacon; egg sausage and bacon; egg and spam; egg bacon and spam; egg bacon sausage and spam; spam bacon sausage and spam; spam egg spam spam bacon and spam; spam sausage spam spam bacon spam tomato and spam; spam spam spam egg and spam; spam spam spam spam spam spam baked beans spam spam spam or Lobster Thermidor a Crevette with a mornay sauce served in a Provencale manner with shallots and aubergines garnished with truffle pate, brandy and with a fried egg on top and spam.}
