@@ -19,7 +19,7 @@ P.FreqUnits = 'Hz';
 P.XlimMode = 'manual'; P.Xlim = [1 50];
 bode(G,w,P)
 drawnow
-print(fh1, '-dpdf', [plotpath 'FoodQualityBeers']);
+print(fh1, '.eps', [plotpath 'FoodQualityBeers']);
 
 %% Plot serveret til
 
